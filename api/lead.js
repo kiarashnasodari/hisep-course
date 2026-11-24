@@ -1,7 +1,7 @@
 // Vercel serverless function: receives a sign-up lead and forwards it to Telegram.
 // Needs two environment variables set in Vercel (Project → Settings → Environment Variables):
 //   TELEGRAM_BOT_TOKEN  token of the bot made with @BotFather
-//   TELEGRAM_CHAT_ID    chat that receives the leads (the support account or a group)
+//   TELEGRAM_CHAT_ID    optional: chat that receives the leads (defaults to Kiarash's chat)
 module.exports = async (req, res) => {
   if (req.method !== "POST") return res.status(405).json({ ok: false });
   let body = req.body || {};
@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
   const price = String(body.price || "").slice(0, 40);
   if (name.length < 2 || !/^09\d{9}$/.test(phone)) return res.status(400).json({ ok: false, error: "invalid" });
 
-  const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID;
+  const token = process.env.TELEGRAM_BOT_TOKEN, chat = process.env.TELEGRAM_CHAT_ID || "6289784037"; // default: Kiarash's chat with @hisepai_leads_bot
   if (!token || !chat) return res.status(500).json({ ok: false, error: "not configured" });
 
   const time = new Date().toLocaleString("fa-IR", { timeZone: "Asia/Tehran" });
