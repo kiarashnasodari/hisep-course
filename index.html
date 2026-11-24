@@ -61,7 +61,7 @@ h3{font-size:19px;font-weight:800;line-height:1.6}
 .b3{width:300px;height:300px;background:var(--ox2);top:40%;left:30%;opacity:.35;animation:float1 18s ease-in-out infinite reverse}
 .grain{position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .hero-grid{display:grid;gap:56px;align-items:center}
-.hero small{display:flex;align-items:center;gap:8px;margin-top:22px;color:var(--muted);font-size:14px}
+.hero small{display:block;margin-top:22px;color:var(--muted);font-size:14px}
 .hero small b{color:var(--gold2)}
 
 /* phone stack */
@@ -335,6 +335,16 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
 .reel .play{transition:opacity .3s,transform .3s var(--ease)}
 .reel{cursor:pointer}
 .reel .likes{position:absolute;top:12px;right:12px;z-index:3;background:rgba(20,8,12,.75);backdrop-filter:blur(8px);border:1px solid rgba(217,182,110,.4);color:var(--gold2);font-weight:900;font-size:15px;border-radius:99px;padding:4px 12px;direction:ltr}
+.price .old{direction:rtl;font-size:20px}
+.price .toman{font-size:14px;font-weight:500;color:var(--muted)}
+.deal{margin:22px auto 0;max-width:360px;border-radius:20px;padding:16px;background:linear-gradient(135deg,rgba(217,182,110,.16),rgba(142,47,74,.22));border:1px solid rgba(217,182,110,.45)}
+.deal span{display:block;font-size:13px;color:var(--gold2);font-weight:700}
+.deal>b{display:block;font-size:clamp(30px,8vw,40px);font-weight:900;line-height:1.4}
+.cd{display:flex;justify-content:center;gap:8px;margin-top:10px;direction:rtl}
+.cd div{min-width:56px;background:rgba(0,0,0,.35);border-radius:12px;padding:6px 4px}
+.cd b{display:block;font-size:22px;font-weight:900;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1.3}
+.cd span{font-size:11px;color:var(--muted);font-weight:500}
+.sticky .sp b{direction:rtl!important;text-align:right!important;font-size:18px!important}
 /* ================= KEYFRAMES ================= */
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
 @keyframes shine{to{background-position:-200% 0}}
@@ -374,14 +384,14 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grain"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow rv"><i></i>بلک‌فرایدی · فقط <span class="js-seats-total">۳۰</span> نفر اول</span>
+      <span class="eyebrow rv"><i></i><span class="js-hero-eyebrow">بلک‌فرایدی</span></span>
       <h1 class="rv d1">ویدیوهایی که<br><span class="grad">میلیون‌ها نفر</span> دیدن،<br>این بار تو می‌سازی.</h1>
       <p class="lead rv d2">از ایده تا ویدیوی کامل با هوش مصنوعی، قدم‌به‌قدم. بعدش یاد می‌گیری با همین ویدیوها از برندهای خارجی دلار بگیری. تجربه‌ی قبلی لازم نیست.</p>
       <div class="btns rv d3">
         <a class="btn btn-main" href="#price">ثبت‌نام می‌کنم <span class="arr">←</span></a>
         <a class="btn btn-ghost" href="#syllabus">سرفصل‌ها</a>
       </div>
-      <small class="rv d4">به‌جای <s class="js-old-inline" dir="ltr"></s> فقط <b class="js-new-inline" dir="ltr"></b></small>
+      <small class="rv d4">به‌جای <s class="js-old-inline"></s> تومان، فقط <b class="js-new-inline"></b> تومان</small>
     </div>
     <div class="stack rv d2">
       <div class="badge bd1"><b>59.3M</b>ویوی یک ریل</div>
@@ -641,9 +651,11 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
         <span class="old js-old"></span>
         <div class="new grad js-new"></div>
         <div class="toman js-toman"></div>
-        <div class="rate js-rate"></div>
+        <div class="deal"><span class="js-deal-label"></span><b class="js-deal-price"></b>
+          <div class="cd js-cd"><div><b data-u="0">۰۰</b><span>روز</span></div><div><b data-u="1">۰۰</b><span>ساعت</span></div><div><b data-u="2">۰۰</b><span>دقیقه</span></div><div><b data-u="3">۰۰</b><span>ثانیه</span></div></div>
+        </div>
         <div class="seatbar js-seatbar">
-          <div class="lbl"><span>ظرفیت تخفیف</span><b class="js-seats"></b></div>
+          <div class="lbl"><span>ظرفیت قیمت ویژه</span><b class="js-seats"></b></div>
           <div class="bar"><i class="js-bar"></i></div>
         </div>
         <ul class="incl">
@@ -697,7 +709,7 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
       <div class="q rv"><button type="button">هزینه‌ی ابزارها توی قیمت هست؟<span class="pl">+</span></button><div class="a"><div><p>نه، اشتراک ابزارهای ساخت ویدیو جداست. توی دوره می‌گیم با چه ابزاری و چه هزینه‌ای شروع کنی.</p></div></div></div>
       <div class="q rv"><button type="button">درس‌ها رو کجا می‌بینم؟<span class="pl">+</span></button><div class="a"><div><p>توی اپ اسپات‌پلیر، با لایسنس اختصاصی خودت.</p></div></div></div>
       <div class="q rv"><button type="button">تضمین می‌کنید درآمد دلاری داشته باشم؟<span class="pl">+</span></button><div class="a"><div><p>نه، قول درآمد نمی‌دیم. چیزی که می‌گیم اینه: اگه قدم‌به‌قدم بسازی، آخرش یه نمونه‌کار واقعی داری و می‌دونی مشتری از کجا میاد و چقدر بگیری.</p></div></div></div>
-      <div class="q rv"><button type="button">قیمت چرا به دلاره؟<span class="pl">+</span></button><div class="a"><div><p>قیمت دوره به دلار تعیین شده. در طول جشنواره مبلغ تومانی ثابته و با بالا و پایین شدن دلار عوض نمی‌شه.</p></div></div></div>
+      <div class="q rv"><button type="button">قیمت چرا به دلاره؟<span class="pl">+</span></button><div class="a"><div><p>ارزش دوره ۲۹ دلاره و معادل تومانیش با دلار روز نشون داده می‌شه. ولی مبلغی که واریز می‌کنی ثابته: تا آخر جمعه ۶,۹۰۰,۰۰۰ تومان، بعدش ۷,۹۰۰,۰۰۰ تومان برای تعداد محدود، و بعد از اون قیمت کامل ۱۴,۰۰۰,۰۰۰ تومان.</p></div></div></div>
     </div>
     <div class="cta-row"><a class="btn btn-ghost js-tg" href="#" target="_blank" rel="noopener">سؤالت اینجا نبود؟ بپرس</a></div>
   </div>
@@ -724,12 +736,14 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
 <script>
 /* ============ تنظیمات: فقط این بخش رو عوض کنید ============ */
 const CONFIG = {
-  USD_RATE: 265000,          // نرخ دلار به تومان، هر روز آپدیت کنید
-  FULL_TOMAN: 14000000,      // قیمت اصلی به تومان
-  OFFER_USD: 29,             // قیمت بلک‌فرایدی به دلار
-  OFFER_TOMAN: 7685000,      // مبلغ ثابت جشنواره به تومان (با نرخ دلار عوض نمی‌شه)
-  SEATS_TOTAL: 30,           // ظرفیت تخفیف
-  SEATS_LEFT: 30,            // جای باقی‌مونده، دستی آپدیت کنید. صفر = قیمت اصلی
+  USD_RATE: 280000,          // نرخ دلار به تومان (فقط برای نمایش معادل تومانی ۲۹ دلار)
+  FULL_TOMAN: 14000000,      // قیمت اصلی، خط‌خورده
+  VALUE_USD: 29,             // ارزش دوره به دلار (نمایشی)
+  BF_TOMAN: 6900000,         // قیمت بلک‌فرایدی، مبلغ واریز
+  BF_END: "2026-11-27T23:59:59+03:30", // پایان بلک‌فرایدی (جمعه، به وقت ایران)
+  AFTER_TOMAN: 7900000,      // قیمت بعد از بلک‌فرایدی (تا پر شدن ظرفیت)
+  SEATS_TOTAL: 30,           // ظرفیت قیمت ۷,۹۰۰,۰۰۰ (بعد از بلک‌فرایدی)
+  SEATS_LEFT: 30,            // جای باقی‌مونده، دستی. صفر = قیمت کامل ۱۴ میلیون
   TELEGRAM_ID: "hisepsupport",
   CARDS: [
     { bank: "بانک پاسارگاد", number: "5022 2910 8773 5070", owner: "سید سپهر مرعشی" }
@@ -742,28 +756,42 @@ const roundK = n => Math.round(n / 1000) * 1000;
 const $$ = s => document.querySelectorAll(s);
 const set = (s, v) => $$(s).forEach(e => e.textContent = v);
 
-const offerOn = CONFIG.SEATS_LEFT > 0;
-const fullUsd = Math.round(CONFIG.FULL_TOMAN / CONFIG.USD_RATE);
-const offerToman = CONFIG.OFFER_TOMAN || roundK(CONFIG.OFFER_USD * CONFIG.USD_RATE);
-const payToman = offerOn ? offerToman : CONFIG.FULL_TOMAN;
-const payUsd = offerOn ? CONFIG.OFFER_USD : fullUsd;
+const bfEnd = new Date(CONFIG.BF_END).getTime();
+const seatsOk = CONFIG.SEATS_LEFT > 0;
+const offerOn = Date.now() < bfEnd;              // بلک‌فرایدی: همه با ۶,۹۰۰,۰۰۰
+const specialOn = !offerOn && seatsOk;            // بعدش: ۷,۹۰۰,۰۰۰ تا پر شدن ظرفیت
+const payToman = offerOn ? CONFIG.BF_TOMAN : specialOn ? CONFIG.AFTER_TOMAN : CONFIG.FULL_TOMAN;
+const valueToman = roundK(CONFIG.VALUE_USD * CONFIG.USD_RATE);
 
 set(".js-seats-total", fa(CONFIG.SEATS_TOTAL));
-set(".js-price-title", offerOn ? "قیمت بلک‌فرایدی" : "قیمت دوره");
-set(".js-old", offerOn ? "$" + fullUsd : "");
-set(".js-old-inline", "$" + fullUsd);
-set(".js-new-inline", "$" + payUsd);
-set(".js-new", "$" + payUsd);
-set(".js-toman", fa(payToman) + " تومان");
-set(".js-rate", offerOn ? "مبلغ ثابت در طول جشنواره" : "");
-set(".js-seats", offerOn ? fa(CONFIG.SEATS_LEFT) + " جا از " + fa(CONFIG.SEATS_TOTAL) + " مونده" : "تکمیل شد");
+set(".js-hero-eyebrow", offerOn ? "بلک‌فرایدی · فقط تا جمعه" : specialOn ? "قیمت ویژه · فقط " + fa(CONFIG.SEATS_LEFT) + " جا مونده" : "ثبت‌نام بازه");
+set(".js-price-title", offerOn ? "قیمت بلک‌فرایدی" : specialOn ? "قیمت ویژه" : "قیمت دوره");
+set(".js-old", fa(CONFIG.FULL_TOMAN) + " تومان");
+set(".js-old-inline", fa(CONFIG.FULL_TOMAN / 1e6) + " میلیون");
+set(".js-new-inline", fa(payToman / 1e6) + " میلیون");
+set(".js-new", "$" + CONFIG.VALUE_USD);
+set(".js-toman", "≈ " + fa(valueToman) + " تومان با دلار امروز");
+set(".js-deal-label", offerOn ? "قیمت بلک‌فرایدی شما" : specialOn ? "قیمت ویژه‌ی شما" : "قیمت دوره");
+set(".js-deal-price", fa(payToman) + " تومان");
+set(".js-seats", seatsOk ? fa(CONFIG.SEATS_LEFT) + " جا از " + fa(CONFIG.SEATS_TOTAL) + " مونده" : "تکمیل شد");
 set(".js-amount", fa(payToman) + " تومان");
-set(".js-sticky-price", "$" + payUsd);
-set(".js-sticky-sub", (offerOn ? "بلک‌فرایدی · " : "") + fa(payToman) + " تومان");
+set(".js-sticky-price", fa(payToman) + " تومان");
+set(".js-sticky-sub", offerOn ? "بلک‌فرایدی · تا جمعه" : specialOn ? "قیمت ویژه" : "");
 set(".js-tg-id", "@" + CONFIG.TELEGRAM_ID);
 $$(".js-tg").forEach(a => a.href = "https://t.me/" + CONFIG.TELEGRAM_ID);
-if (!offerOn) { $$(".js-bf,.js-old").forEach(e => e.style.display = "none"); document.querySelector(".hero small").style.display = "none"; }
-const filled = (CONFIG.SEATS_TOTAL - CONFIG.SEATS_LEFT) / CONFIG.SEATS_TOTAL;
+if (offerOn) { $$(".js-seatbar").forEach(e => e.style.display = "none"); }
+else { $$(".js-bf,.js-cd").forEach(e => e.style.display = "none"); }
+if (!offerOn && !specialOn) { $$(".js-old,.js-seatbar,.hero small").forEach(e => e.style.display = "none"); }
+
+/* countdown */
+function tick(){
+  const d = bfEnd - Date.now();
+  if (d <= 0) { if (offerOn) location.reload(); return; }
+  const t = [Math.floor(d/864e5), Math.floor(d/36e5)%24, Math.floor(d/6e4)%60, Math.floor(d/1e3)%60];
+  $$(".js-cd [data-u]").forEach(e => e.textContent = fa(String(t[+e.dataset.u]).padStart(2,"0")));
+}
+if (offerOn) { tick(); setInterval(tick, 1000); }
+const filled = (CONFIG.SEATS_TOTAL - Math.max(CONFIG.SEATS_LEFT,0)) / CONFIG.SEATS_TOTAL;
 
 /* cards */
 document.querySelector(".js-cards").innerHTML = CONFIG.CARDS.map(c => `
@@ -806,7 +834,7 @@ const io = new IntersectionObserver(entries => entries.forEach(en => {
   const el = en.target; el.classList.add("in");
   el.querySelectorAll("[data-count]").forEach(countUp);
   if (el.matches("[data-count]")) countUp(el);
-  if (el.classList.contains("price-wrap")) { document.querySelector(".js-pricecard").classList.add("in"); document.querySelector(".js-bar").style.width = (offerOn ? Math.max(filled, .04) * 100 : 100) + "%"; }
+  if (el.classList.contains("price-wrap")) { document.querySelector(".js-pricecard").classList.add("in"); document.querySelector(".js-bar").style.width = (specialOn ? Math.max(filled, .04) * 100 : 100) + "%"; }
   io.unobserve(el);
 }), { threshold: .15 });
 $$(".rv").forEach(el => io.observe(el));
