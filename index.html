@@ -345,16 +345,16 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
 .cd b{display:block;font-size:22px;font-weight:900;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1.3}
 .cd span{font-size:11px;color:var(--muted);font-weight:500}
 .sticky .sp b{direction:rtl!important;text-align:right!important;font-size:18px!important}
-.lead{max-width:480px;margin:40px auto 0;display:grid;gap:14px;padding:26px 22px;border-radius:26px;background:var(--bg2);border:1px solid rgba(217,182,110,.4);box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
-.lead h3{font-size:20px}.lead>p{color:var(--muted);font-size:14px;margin-top:-8px}
-.lead label{display:grid;gap:6px;font-size:14px;font-weight:700}
-.lead label small{color:var(--muted);font-weight:400}
-.lead input{font-family:inherit;font-size:17px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(247,240,228,.05);color:var(--cream);outline:none;transition:border-color .2s}
-.lead input:focus{border-color:var(--gold)}
-.lead input.bad{border-color:#FF6B7A}
+.leadform{max-width:480px;margin:40px auto 0;display:grid;gap:14px;padding:26px 22px;border-radius:26px;background:var(--bg2);border:1px solid rgba(217,182,110,.4);box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.leadform h3{font-size:20px}.leadform>p{color:var(--muted);font-size:14px;margin-top:-8px}
+.leadform label{display:grid;gap:6px;font-size:14px;font-weight:700}
+.leadform label small{color:var(--muted);font-weight:400}
+.leadform input{font-family:inherit;font-size:17px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(247,240,228,.05);color:var(--cream);outline:none;transition:border-color .2s}
+.leadform input:focus{border-color:var(--gold)}
+.leadform input.bad{border-color:#FF6B7A}
 .lead-err{color:#FF8A96;font-size:13px;min-height:0}
 .lead-note{color:var(--muted);font-size:12px;text-align:center}
-.lead.done{display:none}
+.leadform.done{display:none}
 .paylock{display:none}.paylock.open{display:block;animation:fadeup .6s var(--ease)}
 @keyframes fadeup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .reel .cap small{display:block;font-size:12px;font-weight:500;color:var(--gold2);margin-top:2px}
@@ -691,7 +691,7 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
       <span class="eyebrow rv"><i></i>ثبت‌نام</span>
       <h2 class="rv d1">چهار قدم <span class="grad">تا شروع</span></h2>
     </div>
-    <form class="lead js-lead rv" novalidate>
+    <form class="leadform js-lead rv" novalidate>
       <h3>اول اطلاعاتت رو ثبت کن</h3>
       <p>بعد از ثبت، شماره کارت و مراحل پرداخت برات باز می‌شه.</p>
       <label>نام و نام خانوادگی<input name="name" autocomplete="name" required placeholder="مثلاً سارا محمدی"></label>
