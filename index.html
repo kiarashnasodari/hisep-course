@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>دوره‌ی ساخت ویدیوی AI | hisep.ai</title>
 <meta name="description" content="ویدیوهایی که میلیون‌ها نفر دیدن، این بار تو می‌سازی. از ایده تا ویدیوی کامل با هوش مصنوعی، و راه درآمد دلاری.">
-<meta name="theme-color" content="#14080C">
+<meta name="theme-color" content="#05060B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#14080C; --bg2:#1E0D13; --ox:#4A1526; --ox2:#6B2238; --wine:#8E2F4A;
@@ -387,6 +387,153 @@ footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 20px 120
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
 }
+
+/* ==================== CYBER THEME ==================== */
+:root{
+  --bg:#05060B; --bg2:#0A0E1A; --ox:#14102A; --ox2:#2A1250; --wine:#B026FF;
+  --cream:#E6F1FF; --cream2:#121A2E; --rose:#FF2BD6; --gold:#00F0FF; --gold2:#7CF9FF;
+  --muted:#8A9BB8; --line:rgba(0,240,255,.16); --mag:#FF2BD6; --lime:#C6FF3D;
+  --num:"Orbitron","Vazirmatn",sans-serif; --mono:"JetBrains Mono","Vazirmatn",monospace;
+}
+body{background:
+  radial-gradient(60% 40% at 85% 0%,rgba(176,38,255,.18),transparent 60%),
+  radial-gradient(50% 40% at 0% 30%,rgba(0,240,255,.10),transparent 60%),
+  linear-gradient(rgba(0,240,255,.045) 1px,transparent 1px) 0 0/44px 44px,
+  linear-gradient(90deg,rgba(0,240,255,.045) 1px,transparent 1px) 0 0/44px 44px,
+  #05060B;background-attachment:fixed}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+::selection{background:var(--mag);color:#000}
+.grad{background:linear-gradient(100deg,#00F0FF,#7CF9FF 30%,#FF2BD6 70%,#B026FF);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%}
+h1,h2{text-shadow:0 0 30px rgba(0,240,255,.12)}
+h1{animation:glitch 6s infinite steps(1)}
+@keyframes glitch{0%,92%,100%{text-shadow:0 0 30px rgba(0,240,255,.15)}93%{text-shadow:3px 0 var(--mag),-3px 0 var(--gold)}95%{text-shadow:-2px 1px var(--mag),2px -1px var(--gold)}97%{text-shadow:1px 0 var(--mag),-1px 0 var(--gold)}}
+/* labels */
+.eyebrow{font-family:var(--mono);border-radius:2px;color:var(--gold);background:rgba(0,240,255,.06);border:1px solid rgba(0,240,255,.35);letter-spacing:.04em}
+.eyebrow::before{content:"//";color:var(--mag);font-weight:700}
+.eyebrow i{background:var(--lime);box-shadow:0 0 10px var(--lime);border-radius:0}
+/* buttons */
+.btn{border-radius:0;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.btn-main{background:linear-gradient(90deg,#00F0FF,#7CF9FF);color:#020308;box-shadow:0 0 0 1px #00F0FF,0 0 30px rgba(0,240,255,.45)}
+.btn-main:hover{box-shadow:0 0 0 1px #00F0FF,0 0 50px rgba(0,240,255,.7);filter:saturate(1.2)}
+.btn-ghost{background:rgba(255,43,214,.06);border:1px solid rgba(255,43,214,.6);color:#FFD6F6}
+/* progress */
+.progress{background:linear-gradient(90deg,var(--gold),var(--mag));box-shadow:0 0 12px var(--gold)}
+/* hero */
+.b1{background:#B026FF}.b2{background:#00F0FF;opacity:.25}.b3{background:#FF2BD6;opacity:.25}
+.hero small b{color:var(--lime)}
+.phone{background:linear-gradient(160deg,#141B2E,#04050A);box-shadow:0 0 0 1px rgba(0,240,255,.35),0 0 40px rgba(0,240,255,.18),0 30px 80px -20px #000}
+.phone .vw b{font-family:var(--num);color:var(--gold2);text-shadow:0 0 12px var(--gold)}
+.badge{border-radius:4px;border-color:rgba(255,43,214,.5);background:rgba(5,6,11,.8)}
+.badge b{font-family:var(--num);color:var(--mag);text-shadow:0 0 12px rgba(255,43,214,.6)}
+/* numbers */
+.bignum,.money,.new,.stat b,.big3 b,.scard .v,.price-range,.cd b,.amount b,.sticky .sp b{font-family:var(--num);letter-spacing:.02em}
+/* marquee */
+.marquee{background:rgba(5,6,11,.8);border-color:rgba(255,43,214,.3)}
+.mq span{font-family:var(--mono);color:#C9D6EE}.mq span::after{content:"◆";color:var(--mag)}
+/* cards: cut corners + neon edge */
+.gcard,.tcard,.wcard,.coach,.gift,.step,.amount,.stat,.post,.scard,.prereq,.leadform,.ch-btn,.ch-in,.q,.shot,.dollar,.price{border-radius:4px}
+.gcard,.tcard,.wcard,.coach,.gift,.stat,.scard,.leadform,.step{background:linear-gradient(160deg,rgba(18,26,46,.85),rgba(6,8,16,.9));border:1px solid var(--line);clip-path:polygon(16px 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%,0 16px)}
+.gcard::before{background:linear-gradient(140deg,var(--gold),transparent 40%,transparent 60%,var(--mag));border-radius:0}
+.gcard .ic,.step .n{background:linear-gradient(135deg,#00F0FF,#B026FF);border-radius:2px;box-shadow:0 0 20px rgba(0,240,255,.4);color:#020308}
+.gcard .bgnum{font-family:var(--num);color:rgba(0,240,255,.06)}
+.av{background:conic-gradient(from 180deg,#00F0FF,#FF2BD6,#B026FF,#00F0FF)}
+.av span{background:#05060B;font-family:var(--num)}
+.tcard .role{color:var(--lime);font-family:var(--mono);font-size:11px}
+/* reels */
+.reel{border-radius:8px;box-shadow:0 0 0 1px rgba(0,240,255,.35),0 0 30px rgba(0,240,255,.12),0 30px 60px -25px #000}
+.reel:hover{box-shadow:0 0 0 1px var(--mag),0 0 40px rgba(255,43,214,.35)}
+.reel .play{border-radius:0;clip-path:polygon(25% 0,100% 50%,25% 100%);background:var(--gold);color:transparent;width:52px;height:52px;border:0}
+.reel .play::before{display:none}
+.reel .likes{border-radius:2px;font-family:var(--num);color:var(--gold2);border-color:rgba(0,240,255,.5)}
+.reel .cap small{color:var(--lime)}
+/* shot */
+.shot{border:1px solid rgba(0,240,255,.4);box-shadow:0 0 40px rgba(0,240,255,.2)}
+.shot .hl{border-color:var(--lime);box-shadow:0 0 0 9999px rgba(0,0,0,.45),0 0 30px var(--lime)}
+/* students wall */
+.scard .h{font-family:var(--mono)}
+/* light sections -> magenta panel */
+.light{background:linear-gradient(180deg,rgba(20,8,40,.92),rgba(8,6,20,.95)),linear-gradient(rgba(255,43,214,.06) 1px,transparent 1px) 0 0/30px 30px;color:var(--cream);border:1px solid rgba(255,43,214,.25);border-radius:6px}
+.light .lead,.light .q .a p,.light .prereq p,.light .wcard li{color:#B9C4DA}
+.light .eyebrow{color:var(--mag);background:rgba(255,43,214,.07);border-color:rgba(255,43,214,.4)}
+.light .eyebrow::before{color:var(--gold)}
+.light .grad{background:linear-gradient(100deg,#FF2BD6,#B026FF 50%,#00F0FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.light .wcard,.light .wcard.yes{background:rgba(10,8,24,.85);border-color:rgba(255,43,214,.3)}
+.light .wcard li{border-color:rgba(255,43,214,.15)}
+.light .q{border-color:rgba(255,43,214,.2)}.light .q .pl{border-color:rgba(255,43,214,.4)}
+.light .btn-ghost{background:rgba(255,43,214,.08);color:#FFD6F6;border-color:rgba(255,43,214,.6)}
+.yes .mk{background:var(--lime);color:#000;border-radius:2px}
+.no .mk{border-radius:2px}
+.post{background:rgba(10,12,26,.9);border:1px solid rgba(0,240,255,.2);box-shadow:none}
+.post .pn{color:#7E8DAA;font-family:var(--mono);font-size:12px}
+.post .px{color:#C9D6EE}
+.post .pa{border-radius:2px;background:linear-gradient(135deg,#FF2BD6,#B026FF)}
+.post .fa{color:var(--gold2)}
+/* inside phones */
+.ip{border-color:#0B1020;box-shadow:0 0 0 1px rgba(0,240,255,.4),0 0 40px rgba(0,240,255,.2),0 40px 70px -30px #000;border-radius:10px}
+.icaps b{font-family:var(--mono);color:var(--gold2)}
+/* dollar */
+.dollar{background:radial-gradient(100% 80% at 100% 0%,rgba(176,38,255,.35),transparent 60%),radial-gradient(80% 70% at 0% 100%,rgba(0,240,255,.15),transparent 60%),#070A14;border:1px solid rgba(0,240,255,.3);clip-path:polygon(24px 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%,0 24px)}
+.chip{border-radius:2px;font-family:var(--mono);font-size:12px;border-color:rgba(0,240,255,.3)}
+.chip::before{content:"▸ ";color:var(--mag)}
+/* chats */
+.bub{background:#0D1424;border:1px solid rgba(0,240,255,.25);border-radius:4px 14px 14px 4px;box-shadow:0 0 24px rgba(0,240,255,.08)}
+.bub .who{color:var(--lime);font-family:var(--mono)}
+.bub .who i{background:var(--lime);box-shadow:0 0 8px var(--lime)}
+/* syllabus */
+.tl::before{background:rgba(0,240,255,.15)}
+.tl .fill{background:linear-gradient(var(--gold),var(--mag));box-shadow:0 0 14px var(--gold)}
+.ch .dot{border-radius:2px;font-family:var(--num);font-size:13px}
+.ch.lit .dot{background:var(--gold);color:#020308;box-shadow:0 0 18px var(--gold)}
+.ch-btn{background:rgba(10,14,26,.85);border-radius:3px}
+.ch.open .ch-btn{background:linear-gradient(160deg,rgba(176,38,255,.2),rgba(10,14,26,.9));border-color:var(--gold);border-radius:3px 3px 0 0}
+.ch-in{background:rgba(8,11,22,.95);border-color:var(--gold);border-radius:0 0 3px 3px}
+.tag{border-radius:2px;font-family:var(--mono)}.tag.ready{background:var(--lime);color:#000;border-color:var(--lime)}
+.tag.soon{color:var(--mag);border-color:rgba(255,43,214,.5)}
+.outp{background:rgba(0,240,255,.07);border-radius:2px;border-right:2px solid var(--gold)}
+.outp b{color:var(--lime)}
+/* after */
+.coach{border-color:rgba(0,240,255,.25)}
+.live{color:var(--mag);font-family:var(--mono)}.live i{background:var(--mag);box-shadow:0 0 10px var(--mag)}
+.gift{background:linear-gradient(140deg,rgba(176,38,255,.3),rgba(6,8,16,.9) 60%);border:1px solid rgba(255,43,214,.4)}
+/* price */
+.price-wrap{border-radius:6px;padding:2px;background:conic-gradient(from var(--a,0deg),#00F0FF,#FF2BD6,#B026FF,#C6FF3D,#00F0FF)}
+.price{background:radial-gradient(100% 60% at 50% 0%,rgba(0,240,255,.14),transparent 70%),#05060B}
+.bf{font-family:var(--num);background:var(--mag);color:#000;border-radius:0;box-shadow:0 0 20px rgba(255,43,214,.6);transform:skew(-8deg)}
+.old::after{background:var(--mag);box-shadow:0 0 8px var(--mag)}
+.new{text-shadow:0 0 40px rgba(0,240,255,.35)}
+.deal{border-radius:4px;background:linear-gradient(135deg,rgba(0,240,255,.12),rgba(176,38,255,.18));border-color:rgba(0,240,255,.5)}
+.deal span{color:var(--lime);font-family:var(--mono)}
+.cd div{border-radius:2px;background:rgba(0,0,0,.55);border:1px solid rgba(0,240,255,.25)}
+.cd b{color:var(--gold);text-shadow:0 0 10px var(--gold)}
+.seatbar .bar{border-radius:0}.seatbar .bar i{border-radius:0;background:linear-gradient(90deg,var(--mag),var(--gold))}
+.incl li .mk{border-radius:2px;background:rgba(198,255,61,.15);color:var(--lime)}
+/* pay */
+.ccard{border-radius:10px;background:linear-gradient(135deg,#1A0F3A,#070A18 55%,#05060B);box-shadow:0 0 0 1px rgba(0,240,255,.4),0 0 50px rgba(176,38,255,.35)}
+.ccard::before{background:radial-gradient(rgba(0,240,255,.35),transparent 70%)}
+.chipc{background:linear-gradient(135deg,#C6FF3D,#00F0FF);border-radius:3px}
+.ccard .no{font-family:var(--mono)}
+.copy{border-radius:0;background:var(--gold);color:#020308;font-family:var(--mono)}
+.copy.ok{background:var(--lime)}
+.amount{background:rgba(0,240,255,.06);border-color:rgba(0,240,255,.4)}
+.amount b{color:var(--gold2)}
+.leadform{border-color:rgba(0,240,255,.4);box-shadow:0 0 40px rgba(0,240,255,.12)}
+.leadform input{border-radius:2px;background:rgba(0,240,255,.04);border-color:rgba(0,240,255,.25);font-family:var(--mono)}
+.leadform input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(0,240,255,.15)}
+/* faq */
+.q .pl{border-radius:2px}
+.q.open .pl{color:var(--gold);border-color:var(--gold)}
+/* final + sticky */
+.final h2{text-shadow:0 0 40px rgba(176,38,255,.4)}
+.sticky .in{border-radius:4px;background:rgba(5,6,11,.9);border-color:rgba(0,240,255,.45);box-shadow:0 0 30px rgba(0,240,255,.2)}
+.sticky .sp b{color:var(--gold2)}
+.toast{background:var(--lime);color:#000;border-radius:0}
+footer{font-family:var(--mono)}
+
+/* persian-safe: no monospace / letter-spacing on Persian text */
+.eyebrow,.chip,.tag,.live,.deal span,.bub .who,.tcard .role,.icaps b,.mq span,footer,.copy,.leadform input{font-family:"Vazirmatn",Tahoma,sans-serif;letter-spacing:0}
+.eyebrow::before{font-family:var(--mono)}
+@media(prefers-reduced-motion:reduce){h1{animation:none}}
 </style>
 </head>
 <body>
